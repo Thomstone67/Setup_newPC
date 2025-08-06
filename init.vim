@@ -3,6 +3,7 @@ Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " open NERDTree automatically
@@ -22,7 +23,6 @@ let g:NERDTreeGitStatusWithFlags = 1
     "\ "Clean"     : "#87939A",   
     "\ "Ignored"   : "#808080"   
     "\ }                         
-
 
 let g:NERDTreeIgnore = ['^node_modules$']
 
@@ -50,8 +50,13 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-css',
   \  'coc-eslint',
-  \  'coc-prettier'
+  \  'coc-prettier',
+  \ 'coc-pyright',
+  \ 'coc-clangd',
+  \ 'coc-sh',
+  \ 'coc-lua'
   \ ]
+
 
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
